@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <script src="app.js" defer></script>
+        <title>Store Base</title>
+    </head>
+    <body>
+        <div class="main_container">
+            <div class="input_container">
+                <h1>Products Entry</h1>
+                <form id="productForm">
+                    <label for="product_name">Product:</label>
+                    <input type="text" placeholder="Enter Product name"
+                        id="product_name" name="product_name" autocomplete="off" required>
+                    <br>
+
+                    <label for="drop-down">Select Category:</label>
+                    <select name="category" id="drop-down"
+                        class="select_category" required>
+                        <option selected disabled>Select category</option>
+                        <option value="Grocery">Grocery</option>
+                        <option value="Sports">Sports</option>
+                        <option value="Clothes">Clothes</option>
+                        <option value="Electric">Electric</option>
+                        <option value="Fruits">Fruits</option>
+                        <option value="Snacks">Snacks</option>
+                    </select>
+                    <br>
+
+                    <label for="price">Price:</label>
+                    <input type="text" placeholder="Enter the price" id="price"
+                        name="price" required autocomplete="off">
+                    <br>
+
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+
+            <div class="table_container">
+                <h1>Stored Data</h1>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Category
+                                <select name id="drop-down-1"
+                                    class="select_category">
+                                    <option value="All">All</option>
+                                    <option value="Grocery">Grocery</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Clothes">Clothes</option>
+                                    <option value="Electric">Electric</option>
+                                    <option value="Fruits">Fruits</option>
+                                    <option value="Snacks">Snacks</option>
+                                </select>
+                            </th>
+                            <th>Price
+                                <span class="tooltip" id="sort-asc">
+                                    ↑
+                                  <span class="tooltiptext">Ascending</span>
+                                </span>
+                                <span class="tooltip" id="sort-desc">
+                                  ↓
+                                  <span class="tooltiptext">Descending</span>
+                                </span>
+                              </th>                              
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+                       
+                    </tbody>
+                    <tr>
+                        <td colspan="2">Total :</td>
+                        <td id="TotalPrice"> 0 ₹</td>
+                    </tr>
+                </table>
+                <ul id="context-menu">
+                    <li id="edit-cell">✏️ Edit</li>
+                    <li id="delete-row">🗑️ Delete</li>
+                  </ul>
+            </div>
+        </div>
+    </body>
+</html>
