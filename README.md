@@ -14,7 +14,7 @@ HTML
 CSS
 JavaScript
 
-📸 Screenshots
+📸 Screen record
 
 
 https://github.com/user-attachments/assets/87aa5bff-7643-451d-bc87-b9e1527aba36
